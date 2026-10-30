@@ -25,7 +25,7 @@ COPY app/ ./
 FROM node:20.11-slim
 
 WORKDIR /app
-RUN npm install -g npm@latest
+RUN npm install -g npm@10
 # TODO(step-4e): copy the fully-installed app from the builder stage.
 COPY --from=builder /app /app
 
